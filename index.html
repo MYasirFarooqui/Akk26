@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Happy 26th Birthday, Ayesha Kamal 💖</title>
+<style>
+/* ===== Tokens ===== */
+:root{--mid:#160B2B;--plum:#30113E;--bur:#581845;--rose:#FF8FB1;--blush:#FFD6E3;--lav:#C9B6FF;--gold:#F5D58A;--warm:#FFF8F2;
+--serif:"Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;--sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+*{box-sizing:border-box;margin:0}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{background:var(--mid);color:var(--warm);font:17px/1.65 var(--sans);overflow-x:hidden;min-height:100vh}
+body.lock{overflow:hidden}
+h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.15}
+h2{font-size:clamp(1.9rem,7vw,3.1rem);text-align:center;color:var(--gold);text-shadow:0 0 24px rgba(245,213,138,.45);margin-bottom:.4em}
+section{padding:72px 18px;position:relative;max-width:1100px;margin:0 auto}
+.sub{text-align:center;opacity:.85;max-width:34em;margin:0 auto 1.6em}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+
+/* ===== Background layers ===== */
+#bg{position:fixed;inset:0;z-index:-2;overflow:hidden;background:var(--mid)}
+#bg::before{content:"";position:absolute;inset:-50%;background:conic-gradient(from 0deg at 50% 50%,#160B2B,#30113E,#581845,#30113E,#160B2B);animation:spin 60s linear infinite;opacity:.9}
+#bg i{position:absolute;width:3px;height:3px;border-radius:50%;background:var(--warm);animation:tw 3s ease-in-out infinite}
+#glow{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.35;background:radial-gradient(circle at 50% 35%,rgba(245,213,138,.35),transparent 60%);transition:opacity .8s}
+body.magic #glow{opacity:1;background:radial-gradient(circle at 50% 40%,rgba(245,213,138,.7),rgba(255,143,177,.3) 50%,transparent 75%)}
+#amb{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+#amb span{position:absolute;bottom:-40px;opacity:0;animation:fl linear infinite}
+#fx{position:fixed;inset:0;z-index:70;pointer-events:none}
+body.hid *{animation-play-state:paused!important}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes tw{50%{opacity:.15;transform:scale(.4)}}
+@keyframes fl{0%{transform:translate(0,0) rotate(0);opacity:0}10%{opacity:.7}90%{opacity:.5}100%{transform:translate(40px,-112vh) rotate(60deg);opacity:0}}
+
+/* ===== Buttons & cards ===== */
+.btn{font:700 1rem var(--sans);min-height:48px;padding:12px 26px;border:0;border-radius:99px;color:var(--mid);cursor:pointer;
+background:linear-gradient(135deg,var(--rose),var(--gold));box-shadow:0 6px 22px rgba(255,143,177,.35);transition:transform .2s,box-shadow .2s;touch-action:manipulation}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(245,213,138,.5)}
+.btn:active{transform:scale(.96)}
+.btn.ghost{background:transparent;color:var(--gold);border:1.5px solid var(--gold);box-shadow:none}
+.row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:18px}
+.card{background:rgba(255,248,242,.07);border:1px solid rgba(245,213,138,.35);border-radius:22px;padding:22px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 10px 40px rgba(0,0,0,.3),inset 0 0 30px rgba(255,143,177,.06);text-align:center}
+.card h3{font-size:1.3rem;color:var(--blush);margin-bottom:.4em}
+.card p.d{opacity:.8;font-size:.95rem;margin-bottom:12px}
+.msg{min-height:3.4em;margin-top:14px;color:var(--gold);font-family:var(--serif);font-size:1.1rem;font-style:italic}
+.pop{animation:pop .6s cubic-bezier(.2,1.4,.4,1)}
+@keyframes pop{from{opacity:0;transform:scale(.7)}}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s,transform .9s}
+.rv.in{opacity:1;transform:none}
+
+/* ===== Nav ===== */
+#navBtn,#top,#mBtn{position:fixed;z-index:60;width:48px;height:48px;border-radius:50%;border:1px solid var(--gold);background:rgba(22,11,43,.8);color:var(--gold);font-size:1.3rem;cursor:pointer;backdrop-filter:blur(8px)}
+#navBtn{top:12px;right:12px}
+#mBtn{top:12px;left:12px;font-size:1.1rem}
+#mBtn.on{box-shadow:0 0 16px rgba(245,213,138,.7);animation:bob 1.6s ease-in-out infinite}
+#top{bottom:16px;right:16px;opacity:0;pointer-events:none;transition:opacity .3s}
+#top.on{opacity:1;pointer-events:auto}
+#menu{position:fixed;z-index:60;top:68px;right:12px;display:flex;flex-direction:column;background:rgba(22,11,43,.94);border:1px solid rgba(245,213,138,.4);border-radius:18px;padding:8px;min-width:200px}
+#menu a{color:var(--warm);text-decoration:none;padding:12px 16px;border-radius:12px;min-height:44px}
+#menu a:hover{background:rgba(255,143,177,.2)}
+
+/* ===== Welcome overlay ===== */
+#ov{position:fixed;inset:0;z-index:100;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;
+height:100vh;height:100dvh;background:radial-gradient(circle at 50% 45%,#581845 0,#30113E 40%,#160B2B 80%);transition:opacity 1s,transform 1s;overflow:auto}
+#ov.go{opacity:0;transform:scale(1.15);pointer-events:none}
+#ov::before{content:"";position:absolute;width:70vmin;height:70vmin;border-radius:50%;background:radial-gradient(circle,rgba(245,213,138,.35),transparent 65%);animation:breathe 5s ease-in-out infinite}
+#ov>*{position:relative}
+@keyframes breathe{50%{transform:scale(1.25);opacity:.6}}
+.name{font-size:clamp(2.3rem,12vw,5.2rem);letter-spacing:.08em;color:var(--gold);text-shadow:0 0 30px rgba(245,213,138,.7),0 0 70px rgba(255,143,177,.4);line-height:1.05}
+.name span{display:inline-block;opacity:0;transform:translateY(30px) scale(.6);animation:ltr .8s forwards}
+.name b{display:block}
+@keyframes ltr{to{opacity:1;transform:none}}
+.hb{font-size:clamp(1.6rem,7vw,2.8rem);margin:.5em 0 .2em;color:var(--blush);text-shadow:0 0 22px rgba(255,143,177,.7)}
+.badge{display:inline-block;margin:14px 0;padding:8px 22px;border:1.5px solid var(--gold);border-radius:99px;color:var(--gold);letter-spacing:.3em;font-weight:700;animation:glowb 3s ease-in-out infinite}
+@keyframes glowb{50%{box-shadow:0 0 22px rgba(245,213,138,.6)}}
+.cdx{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:12px auto 22px;max-width:360px}
+.cdx div{min-width:64px;padding:8px;border-radius:14px;background:rgba(255,248,242,.08);border:1px solid rgba(245,213,138,.3)}
+.cdx strong{display:block;font:700 1.5rem var(--serif);color:var(--gold)}
+.cdx small{font-size:.75rem;opacity:.8}
+.cdx p{width:100%;font-family:var(--serif);font-size:1.15rem;color:var(--blush)}
+
+/* ===== Hero ===== */
+#welcome{min-height:80vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+#welcome .name span{opacity:1;transform:none;animation:none}
+
+/* ===== Cake ===== */
+.cake{width:min(300px,86vw);margin:20px auto 0;position:relative;filter:drop-shadow(0 20px 30px rgba(0,0,0,.5)) drop-shadow(0 0 30px rgba(255,143,177,.25))}
+#candles{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 6px;width:min(272px,92%);margin:0 auto;position:relative;z-index:2}
+.candle{width:10px;height:30px;border-radius:3px;position:relative;background:repeating-linear-gradient(45deg,var(--blush) 0 4px,var(--rose) 4px 8px);margin-top:16px}
+.flame{position:absolute;left:50%;top:-16px;width:9px;height:15px;margin-left:-4.5px;border-radius:50% 50% 50% 50%/65% 65% 35% 35%;background:radial-gradient(circle at 50% 70%,#fff 0,var(--gold) 45%,#ff9a3c 100%);box-shadow:0 0 12px 3px rgba(245,213,138,.7);transform-origin:50% 100%;animation:fk .4s ease-in-out infinite alternate;transition:transform .6s,opacity .6s}
+@keyframes fk{from{transform:scale(1,1) rotate(-4deg)}to{transform:scale(.88,1.12) rotate(4deg)}}
+.cake.out .flame{animation:none;transform:scale(0);opacity:0}
+.tier{margin:0 auto;border-radius:14px 14px 10px 10px;position:relative;background-image:radial-gradient(var(--gold) 1.5px,transparent 2px),radial-gradient(var(--lav) 1.5px,transparent 2px);background-size:22px 18px,31px 23px}
+.tier::before{content:"";position:absolute;left:0;right:0;top:-2px;height:22px;border-radius:14px 14px 40% 40%/14px 14px 100% 100%;background:var(--blush);box-shadow:0 4px 0 var(--rose)}
+.t1{width:100%;height:78px;background-color:var(--bur)}
+.t2{width:78%;height:66px;background-color:#7a2457;margin-bottom:-2px}
+.t3{width:56%;height:56px;background-color:#9b2f6c;margin-bottom:-2px}
+.cake .plate{height:12px;width:112%;margin:-2px -6%;border-radius:50%;background:linear-gradient(var(--gold),#b8924a)}
+.cake{animation:cakeIn 1.2s cubic-bezier(.2,1.2,.4,1) both;animation-play-state:paused}
+#cake.in .cake{animation-play-state:running}
+@keyframes cakeIn{from{opacity:0;transform:translateY(60px) scale(.7)}}
+.spk{position:absolute;color:var(--gold);animation:tw 2.4s ease-in-out infinite}
+body.dim main>section:not(#cake),body.dim footer{opacity:.25;transition:opacity .8s}
+body.dim #glow{opacity:.05}
+
+/* ===== Surprise grid ===== */
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr))}
+.env{width:110px;height:76px;margin:6px auto 12px;position:relative;border:0;cursor:pointer;background:var(--blush);border-radius:6px;box-shadow:0 6px 18px rgba(0,0,0,.35);display:block}
+.env::before{content:"";position:absolute;left:0;right:0;top:0;height:50px;background:var(--rose);clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:transform .6s;border-radius:6px 6px 0 0}
+.env::after{content:"♥";position:absolute;left:50%;top:26px;margin-left:-12px;color:#c0264e;font-size:1.5rem;animation:bob 1.6s ease-in-out infinite}
+.env.open::before{transform:rotateX(180deg)}
+@keyframes bob{50%{transform:translateY(-5px)}}
+#bigHeart{position:fixed;left:50%;top:50%;z-index:75;font-size:clamp(8rem,45vw,18rem);color:var(--rose);text-shadow:0 0 60px var(--rose);transform:translate(-50%,-50%) scale(0);opacity:0;pointer-events:none;line-height:1}
+#bigHeart.go{animation:bh 1.8s ease-out}
+@keyframes bh{0%{transform:translate(-50%,-50%) scale(0);opacity:1}35%{transform:translate(-50%,-50%) scale(1.1);opacity:1}55%{transform:translate(-50%,-50%) scale(.95);opacity:1}100%{transform:translate(-50%,-50%) scale(1.6);opacity:0}}
+.vol{width:100%;max-width:180px;accent-color:var(--rose);height:28px}
+.mus{display:flex;gap:10px;align-items:center;justify-content:center;flex-wrap:wrap}
+
+/* ===== Gift ===== */
+.gift{display:block;margin:20px auto 0;width:150px;height:150px;position:relative;border:0;background:none;cursor:pointer;animation:bob 2s ease-in-out infinite}
+.gift .bx{position:absolute;bottom:0;left:10px;right:10px;height:95px;border-radius:6px;background:linear-gradient(135deg,var(--rose),var(--bur));box-shadow:0 0 28px rgba(245,213,138,.5)}
+.gift .bx::after,.gift .lid::after{content:"";position:absolute;left:50%;top:0;bottom:0;width:22px;margin-left:-11px;background:var(--gold)}
+.gift .lid{position:absolute;left:2px;right:2px;bottom:90px;height:34px;border-radius:6px;background:linear-gradient(135deg,#ff6f9b,#7a2457);transition:transform .8s cubic-bezier(.3,1.5,.5,1);transform-origin:left bottom;box-shadow:0 0 18px rgba(245,213,138,.5)}
+.gift .lid::before{content:"🎀";position:absolute;left:50%;top:-24px;margin-left:-16px;font-size:2rem;z-index:1}
+.gift.open{animation:none}
+.gift.open .lid{transform:translate(-14px,-58px) rotate(-28deg)}
+.gmsg{font:700 clamp(1.3rem,5.5vw,2rem) var(--serif);color:var(--gold);text-align:center;text-shadow:0 0 20px rgba(245,213,138,.6);margin-top:18px;min-height:2.6em}
+
+/* ===== Letter ===== */
+.letter{max-width:640px;margin:0 auto;padding:30px 24px 34px;border-radius:12px;position:relative;text-align:left;color:#3a1530;background:linear-gradient(160deg,#FFF8F2,#FFD6E3);border:3px double var(--gold);box-shadow:0 0 0 6px rgba(255,143,177,.25),0 20px 50px rgba(0,0,0,.4);font:1.12rem/1.85 var(--serif)}
+.letter p+p{margin-top:1em}
+.letter h3{color:#7a2457;margin-bottom:.6em}
+.seal{width:62px;height:62px;border-radius:50%;margin:0 auto 18px;display:grid;place-items:center;font-size:1.7rem;color:#ffd6e3;background:radial-gradient(circle at 35%,#e0426b,#7d1032);box-shadow:0 4px 12px rgba(0,0,0,.4)}
+.letter.show{animation:pop .9s}
+
+/* ===== 26 years ===== */
+.ring{position:relative;width:min(300px,86vw);height:min(300px,86vw);margin:10px auto 24px}
+.ring .n{position:absolute;inset:0;display:grid;place-items:center;font:700 clamp(5rem,28vw,8rem) var(--serif);background:linear-gradient(var(--gold),var(--rose));-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 20px rgba(245,213,138,.5))}
+.ring i{position:absolute;left:50%;top:50%;width:16px;height:16px;margin:-8px;font-style:normal;font-size:14px;text-align:center;line-height:16px;color:var(--gold);animation:tw 3s ease-in-out infinite}
+.tl{list-style:none;max-width:460px;margin:0 auto;padding-left:26px;border-left:2px solid var(--gold)}
+.tl li{position:relative;padding:8px 0 14px 14px}
+.tl li::before{content:"✦";position:absolute;left:-36px;color:var(--gold);background:var(--mid);width:20px;text-align:center}
+
+/* ===== Wall ===== */
+.wall{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:20px}
+.wall .w{flex:1 1 230px;max-width:340px;padding:16px;border-radius:16px;background:rgba(255,248,242,.08);border:1px solid rgba(201,182,255,.4);font-family:var(--serif);font-style:italic;animation:bob 4s ease-in-out infinite;transition:transform .4s,border-color .4s,box-shadow .4s}
+.wall .w:nth-child(2n){animation-delay:-1.4s}.wall .w:nth-child(3n){animation-delay:-2.6s}
+.wall .w.hi{border-color:var(--gold);box-shadow:0 0 26px rgba(245,213,138,.6);background:rgba(245,213,138,.15)}
+
+/* ===== Finale ===== */
+#finale{max-width:none;text-align:center;background:linear-gradient(180deg,transparent,var(--bur) 55%,var(--mid));padding:100px 18px}
+#finale h2{font-size:clamp(2.4rem,11vw,5.5rem);letter-spacing:.04em}
+#finale h2.wow{animation:wow 1.6s}
+@keyframes wow{30%{transform:scale(1.18);text-shadow:0 0 60px var(--gold),0 0 100px var(--rose)}}
+#finale p.big{font:clamp(1.2rem,5vw,1.8rem) var(--serif);color:var(--blush);margin:0 auto 18px;max-width:22em}
+#finale p.txt{max-width:36em;margin:0 auto 24px;opacity:.9}
+#fin{font:700 clamp(1.3rem,6vw,2.4rem) var(--serif);color:var(--gold);min-height:2.4em;margin-top:22px;text-shadow:0 0 24px rgba(245,213,138,.7)}
+footer{text-align:center;padding:30px 18px 50px;color:var(--blush);opacity:.85;font-size:.95rem}
+
+/* ===== Modal ===== */
+#modal{position:fixed;inset:0;z-index:90;display:grid;place-items:center;padding:16px;background:rgba(10,4,20,.8)}
+#modal .letter{max-height:90vh;max-height:90dvh;overflow:auto;animation:pop .8s;width:100%}
+.x{position:sticky;float:right;top:0;margin:-14px -10px 0 0;width:44px;height:44px;border-radius:50%;border:1px solid #7a2457;background:#fff;color:#7a2457;font-size:1.2rem;cursor:pointer}
+
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}#amb{display:none}}
+</style>
+</head>
+<body class="lock">
+<div id="bg" aria-hidden="true"></div><div id="glow" aria-hidden="true"></div><div id="amb" aria-hidden="true"></div>
+<canvas id="fx" aria-hidden="true"></canvas>
+<div id="bigHeart" aria-hidden="true">💖</div>
+
+<!-- Welcome overlay -->
+<div id="ov" role="dialog" aria-label="Birthday welcome">
+  <h1 class="name" id="ovName" aria-label="Ayesha Kamal"></h1>
+  <p class="hb">Happy 26th Birthday! 🎂</p>
+  <p class="sub">“Today, the world celebrates someone truly special. ✨”</p>
+  <div class="badge" aria-label="16 October 2026">16 · 10 · 2026</div>
+  <div id="cd" class="cdx"></div>
+  <button class="btn" id="open">Open Your Birthday Surprise ✨</button>
+</div>
+
+<button id="mBtn" aria-label="Play or pause music" aria-pressed="false">🎵</button>
+<button id="navBtn" aria-label="Open menu" aria-expanded="false" aria-controls="menu">☰</button>
+<nav id="menu" hidden aria-label="Sections">
+  <a href="#welcome">Welcome</a><a href="#cake">Cake</a><a href="#magic">Birthday Magic</a><a href="#letter">Letter</a><a href="#years">26 Years</a><a href="#wall">Wish Wall</a><a href="#gift">Gift</a><a href="#finale">Finale</a>
+</nav>
+<button id="top" aria-label="Back to top">↑</button>
+
+<main id="main" inert>
+<section id="welcome" class="rv">
+  <h2 class="name" style="font-size:clamp(2.3rem,12vw,5.2rem);margin:0"><b>AYESHA</b><b>KAMAL</b></h2>
+  <p class="hb">Happy 26th Birthday! 🎂</p>
+  <div id="cd2" class="cdx"></div>
+  <p class="sub">Scroll down. Every button here is a little gift. ✨</p>
+</section>
+
+<section id="cake" class="rv">
+  <h2>Make a Wish 🕯️</h2>
+  <p class="sub">26 candles for 26 years.</p>
+  <div class="cake" id="cakeBox">
+    <span class="spk" style="left:-4%;top:10%">✦</span><span class="spk" style="right:-2%;top:0;animation-delay:-1s">✧</span><span class="spk" style="left:6%;bottom:18%;animation-delay:-.5s">✦</span><span class="spk" style="right:4%;bottom:30%;animation-delay:-1.7s">✧</span>
+    <div id="candles" aria-label="26 candles"></div>
+    <div class="tier t3"></div><div class="tier t2"></div><div class="tier t1"></div><div class="plate"></div>
+  </div>
+  <div class="row"><button class="btn" id="wish">Make a Wish 🕯️</button><button class="btn ghost" id="relight" hidden>Light the Candles Again</button></div>
+  <div class="msg" id="wishMsg" aria-live="polite" style="text-align:center"></div>
+</section>
+
+<section id="magic" class="rv">
+  <h2>A Little Box of Birthday Magic 🎁</h2>
+  <div class="grid">
+    <article class="card"><h3>A Shower of Happiness 🎉</h3><p class="d">Confetti, hearts and stars.</p><button class="btn" id="b1">Shower Me</button><p class="msg" id="m1" aria-live="polite"></p></article>
+    <article class="card"><h3>A Little Birthday Love 💌</h3><p class="d">Tap the envelope.</p><button class="env" id="env" aria-label="Open the envelope"></button></article>
+    <article class="card"><h3>Make Today Magical ✨</h3><p class="d">Brighter lights, rising sparkles.</p><button class="btn" id="b3">Make It Magical</button><p class="msg" id="m3" aria-live="polite"></p></article>
+    <article class="card"><h3>A Thousand Smiles 😊</h3><p class="d">One cheerful message at a time.</p><button class="btn" id="b4">Give Me Another Smile</button><p class="msg" id="m4" aria-live="polite"></p></article>
+    <article class="card"><h3>A Secret Birthday Message 🔐</h3><p class="d">Just for fun, no password needed.</p><button class="btn" id="b5">Unlock Your Secret Message 💗</button><p class="msg" id="m5" aria-live="polite"></p></article>
+    <article class="card"><h3>A Burst of Love 💖</h3><p class="d">One big heart, lots of little ones.</p><button class="btn" id="b6">Send Love</button><p class="msg" id="m6" aria-live="polite"></p></article>
+    <article class="card"><h3>A Birthday Wish Generator 🌸</h3><p class="d">A fresh wish on every tap.</p><button class="btn" id="b7">Generate a Wish</button><p class="msg" id="m7" aria-live="polite"></p></article>
+    <article class="card"><h3>Play Birthday Music 🎵</h3><p class="d">A gentle melody made right in your browser.</p>
+      <div class="mus"><button class="btn" id="play" aria-pressed="false">▶ Play</button><button class="btn ghost" id="stop">■ Stop</button><input class="vol" id="vol" type="range" min="0" max="1" step=".05" value=".4" aria-label="Volume"></div>
+      <p class="msg" id="mst" aria-live="polite">Music is off.</p></article>
+    <article class="card"><h3>A Tiny Fireworks Show 🎆</h3><p class="d">A few seconds of sparkle.</p><button class="btn" id="b9">Launch Fireworks</button><p class="msg" id="m9" aria-live="polite"></p></article>
+  </div>
+</section>
+
+<section id="letter" class="rv">
+  <h2>A Little Note for Ayesha 💖</h2>
+  <div class="row" style="margin-bottom:22px"><button class="btn" id="readL" aria-expanded="false">Read Your Birthday Note 💌</button></div>
+  <div class="letter" id="letterBox" hidden>
+    <div class="seal" aria-hidden="true">♥</div>
+    <p>Happy 26th Birthday, Ayesha Kamal! 🥳💗</p>
+    <p>May this beautiful new chapter of your life bring you endless happiness, peace, success, laughter, and countless reasons to smile. May your dreams grow bigger, your worries grow smaller, and your days be filled with people and moments that make your heart happy.</p>
+    <p>Never forget how special you are and how much beauty you bring into the world just by being yourself. May every wish you make today become a beautiful possibility tomorrow.</p>
+    <p>Here’s to 26 years of memories, a new year full of adventures, and many more wonderful birthdays ahead. Keep smiling, keep shining, and keep being wonderfully you.</p>
+    <p>Happy Birthday once again, Ayesha! 🎂🌸✨</p>
+  </div>
+</section>
+
+<section id="years" class="rv">
+  <h2>26 Years of Being Wonderful 🌷</h2>
+  <div class="ring" id="ring"><div class="n" aria-label="26">26</div></div>
+  <ul class="tl"><li>26 years of growth.</li><li>26 years of new possibilities.</li><li>26 years of lessons and laughter.</li><li>A brand-new chapter of dreams and adventures.</li></ul>
+  <div class="row"><button class="btn" id="b26">Reveal a Birthday Wish ✨</button></div>
+  <p class="msg" id="m26" aria-live="polite" style="text-align:center"></p>
+</section>
+
+<section id="wall" class="rv">
+  <h2>Birthday Wish Wall 💫</h2>
+  <p class="msg" id="wallMsg" aria-live="polite" style="text-align:center;font-size:1.3rem">Tap a button to begin.</p>
+  <div class="wall" id="wallCards"></div>
+  <div class="row"><button class="btn" id="wa">Show Me Another Wish 💫</button><button class="btn" id="wb">Send More Happiness 💖</button><button class="btn" id="wc">Celebrate This Moment 🎉</button></div>
+  <p class="sub" id="wcount" style="margin-top:14px" aria-live="polite"></p>
+</section>
+
+<section id="gift" class="rv">
+  <h2>The Ultimate Surprise 🎁</h2>
+  <p class="sub">Tap the gift to open it.</p>
+  <button class="gift" id="giftBtn" aria-label="Open the gift box"><span class="bx"></span><span class="lid"></span></button>
+  <div class="gmsg" id="gmsg" aria-live="polite"></div>
+  <div class="row"><button class="btn ghost" id="gclose" hidden>Close the Gift 🎁</button></div>
+</section>
+
+<section id="finale" class="rv">
+  <h2 id="fh">AYESHA KAMAL 💖</h2>
+  <p class="big">May Your 26th Year Be Your Most Beautiful One Yet!</p>
+  <p class="txt">May life surprise you with beautiful opportunities, unforgettable moments, genuine happiness, and countless reasons to smile. Keep shining, Ayesha. The best chapters are still waiting to unfold. ✨</p>
+  <div class="row"><button class="btn" id="cel">Celebrate Again! 🎉</button><button class="btn ghost" id="reset" hidden>Reset the Finale</button></div>
+  <div id="fin" aria-live="polite"></div>
+</section>
+</main>
+<footer>Made with 💗 to celebrate Ayesha Kamal | 16.10.2026</footer>
+
+<!-- Envelope modal -->
+<div id="modal" hidden>
+  <div class="letter" role="dialog" aria-modal="true" aria-labelledby="mt">
+    <button class="x" id="mx" aria-label="Close letter">✕</button>
+    <div class="seal" aria-hidden="true">♥</div>
+    <h3 id="mt">For Ayesha 💌</h3>
+    <p>Happy Birthday, Ayesha! May your day be soft, bright and full of things that make you smile. You deserve every good thing coming your way this year. 🌸</p>
+    <p>Take a deep breath, enjoy the cake, and let today be all about you. 💖</p>
+  </div>
+</div>
+
+<script>
+(() => {
+"use strict";
+const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+const RM = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const rnd = (a, b) => a + Math.random() * (b - a);
+const re = (el, c) => { el.classList.remove(c); void el.offsetWidth; el.classList.add(c); };
+// Random picker that never repeats the previous item back-to-back
+const deck = arr => { let last = -1; return () => { let i; do { i = Math.floor(Math.random() * arr.length); } while (arr.length > 1 && i === last); last = i; return arr[i]; }; };
+const say = (el, t) => { el.textContent = t; re(el, "pop"); };
+const tw = (el, t, sp = 35) => { clearInterval(el._t); const a = Array.from(t); if (RM) { el.textContent = t; return; } let i = 0; el.textContent = ""; el._t = setInterval(() => { el.textContent = a.slice(0, ++i).join(""); if (i >= a.length) clearInterval(el._t); }, sp); };
+
+/* ===== Particle engine (single canvas, capped, stops when idle) ===== */
+const cv = $("#fx"), cx = cv.getContext("2d");
+const COLS = ["#FF8FB1", "#FFD6E3", "#C9B6FF", "#F5D58A", "#FFF8F2"];
+let P = [], raf = 0, W = 0, H = 0;
+const size = () => { const d = Math.min(devicePixelRatio || 1, 2); W = innerWidth; H = innerHeight; cv.width = W * d; cv.height = H * d; cx.setTransform(d, 0, 0, d, 0, 0); };
+addEventListener("resize", size); size();
+const add = p => { if (P.length < 450) P.push(p); if (!raf && !document.hidden) raf = requestAnimationFrame(tick); };
+function tick() {
+  cx.clearRect(0, 0, W, H);
+  for (let i = P.length - 1; i >= 0; i--) {
+    const p = P[i];
+    p.vy += p.g; p.vx *= p.f; p.x += p.vx; p.y += p.vy; p.a += p.va; p.l--;
+    if (p.l <= 0 || p.y > H + 40 || p.y < -60) { P.splice(i, 1); continue; }
+    cx.globalAlpha = Math.min(1, p.l / 20); cx.fillStyle = p.c;
+    if (p.t === "r") { cx.save(); cx.translate(p.x, p.y); cx.rotate(p.a); cx.fillRect(-p.s / 2, -p.s / 4, p.s, p.s / 2); cx.restore(); }
+    else if (p.t === "d") { cx.beginPath(); cx.arc(p.x, p.y, p.s / 3, 0, 7); cx.fill(); }
+    else { cx.font = p.s + "px serif"; cx.textAlign = "center"; cx.fillText(p.t, p.x, p.y); }
+  }
+  cx.globalAlpha = 1;
+  raf = P.length ? requestAnimationFrame(tick) : 0;
+  if (!raf) cx.clearRect(0, 0, W, H);
+}
+function burst(x, y, n, o = {}) {
+  n = RM ? Math.ceil(n * .3) : n; const k = o.k || ["r", "♥", "★", "d"];
+  for (let i = 0; i < n; i++) {
+    const a = rnd(0, 6.28), s = (o.sp || 9) * rnd(.3, 1), t = k[i % k.length];
+    add({ t, x, y, vx: Math.cos(a) * s, vy: Math.sin(a) * s - 3, g: .18, f: .985, a: rnd(0, 6), va: rnd(-.15, .15), s: t === "r" ? rnd(9, 16) : rnd(14, 28), l: rnd(90, 150), c: COLS[i % 5] });
+  }
+}
+function rise(n, k = ["♥", "✦", "★"], cols = COLS) {
+  n = RM ? Math.ceil(n * .3) : n;
+  for (let i = 0; i < n; i++) add({ t: k[i % k.length], x: rnd(0, W), y: H + 10, vx: rnd(-.5, .5), vy: -rnd(2, 5), g: 0, f: 1, a: 0, va: 0, s: rnd(12, 28), l: 260, c: cols[i % cols.length] });
+}
+function confetti(n) {
+  n = RM ? Math.ceil(n * .3) : n;
+  for (let i = 0; i < n; i++) add({ t: i % 6 ? "r" : "♥", x: rnd(0, W), y: -10, vx: rnd(-2, 2), vy: rnd(1, 4), g: .04, f: .995, a: rnd(0, 6), va: rnd(-.2, .2), s: rnd(9, 16), l: 320, c: COLS[i % 5] });
+}
+let fwI = 0, fwE = 0;
+function fireworks(ms) {
+  clearInterval(fwI); clearTimeout(fwE);
+  const go = () => {
+    const x = W * rnd(.15, .85), y = H * rnd(.15, .55), c = [COLS[Math.floor(rnd(0, 4))], "#F5D58A"], n = RM ? 12 : 46;
+    for (let i = 0; i < n; i++) { const a = 6.28 * i / n, s = rnd(3, 6.5); add({ t: "d", x, y, vx: Math.cos(a) * s, vy: Math.sin(a) * s, g: .05, f: .965, a: 0, va: 0, s: 9, l: rnd(60, 90), c: c[i % 2] }); }
+  };
+  go(); fwI = setInterval(go, 520); fwE = setTimeout(() => clearInterval(fwI), ms);
+}
+const center = () => [W / 2, H / 2];
+
+/* ===== Ambient background ===== */
+const bg = $("#bg"), amb = $("#amb");
+for (let i = 0; i < 45; i++) { const s = document.createElement("i"); s.style.cssText = `left:${rnd(0, 100)}%;top:${rnd(0, 100)}%;animation-delay:${rnd(-3, 0)}s;animation-duration:${rnd(2, 5)}s`; bg.appendChild(s); }
+for (let i = 0; i < 16; i++) { const s = document.createElement("span"); s.textContent = ["♥", "✿", "✦", "❀"][i % 4]; s.style.cssText = `left:${rnd(0, 96)}%;font-size:${rnd(12, 28)}px;color:${COLS[i % 5]};animation-duration:${rnd(14, 28)}s;animation-delay:${rnd(-28, 0)}s`; amb.appendChild(s); }
+
+/* ===== Opening: name, countdown, open button ===== */
+$("#ovName").innerHTML = ["AYESHA", "KAMAL"].map((w, wi) => "<b>" + [...w].map((c, i) => `<span style="animation-delay:${(wi * 6 + i) * .09 + .3}s">${c}</span>`).join("") + "</b>").join("");
+const cds = $$(".cdx");
+let cdState = null;
+function updateCd() {
+  const n = new Date(), t = new Date(2026, 9, 16), today = new Date(n.getFullYear(), n.getMonth(), n.getDate());
+  let html, st;
+  if (+today === +t) { st = "day"; html = "<p>It’s today! Happy 26th Birthday! 🎉🎂</p>"; }
+  else if (n < t) {
+    st = "before"; let s = Math.floor((t - n) / 1000); const d = Math.floor(s / 86400); s %= 86400;
+    const h = Math.floor(s / 3600); s %= 3600; const m = Math.floor(s / 60); s %= 60;
+    html = [[d, "days"], [h, "hours"], [m, "min"], [s, "sec"]].map(([v, l]) => `<div><strong>${v}</strong><small>${l}</small></div>`).join("");
+  } else { st = "after"; html = "<p>Your 26th birthday was on 16.10.2026. The celebration lives on here! 💖</p>"; }
+  cds.forEach(e => { e.innerHTML = html; });
+  // Page is open as the clock strikes midnight: celebrate automatically
+  if (cdState === "before" && st === "day") { confetti(220); fireworks(4500); rise(26, ["♥", "★"], ["#FF8FB1", "#F5D58A"]); }
+  cdState = st;
+}
+updateCd(); setInterval(updateCd, 1000);
+$("#open").addEventListener("click", () => {
+  const [x, y] = center(); burst(x, y, 90, { sp: 12 }); rise(20); musicOn();
+  $("#ov").classList.add("go");
+  setTimeout(() => { $("#ov").hidden = true; document.body.classList.remove("lock"); $("#main").inert = false; $$(".rv").forEach(e => io.observe(e)); }, 1000);
+});
+
+/* ===== Reveal on scroll, nav, back to top ===== */
+const io = "IntersectionObserver" in window ? new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: .12 }) : { observe: e => e.classList.add("in") };
+const navBtn = $("#navBtn"), menu = $("#menu");
+const setMenu = o => { menu.hidden = !o; navBtn.setAttribute("aria-expanded", o); navBtn.textContent = o ? "✕" : "☰"; };
+navBtn.addEventListener("click", () => setMenu(menu.hidden));
+menu.addEventListener("click", e => { if (e.target.tagName === "A") setMenu(false); });
+$("#top").addEventListener("click", () => scrollTo({ top: 0, behavior: RM ? "auto" : "smooth" }));
+addEventListener("scroll", () => $("#top").classList.toggle("on", scrollY > 500), { passive: true });
+
+/* ===== Cake ===== */
+const candles = $("#candles");
+for (let i = 0; i < 26; i++) { const c = document.createElement("i"); c.className = "candle"; c.innerHTML = `<b class="flame" style="animation-delay:${rnd(-.4, 0)}s"></b>`; candles.appendChild(c); }
+const cake = $("#cakeBox"), wishMsg = $("#wishMsg");
+let wishT = 0;
+$("#wish").addEventListener("click", () => {
+  clearTimeout(wishT); cake.classList.add("out"); document.body.classList.add("dim");
+  $("#wish").hidden = true; $("#relight").hidden = false;
+  const r = cake.getBoundingClientRect(); burst(r.left + r.width / 2, r.top + 30, 40, { k: ["d"], sp: 5 }); rise(18, ["✦", "★"], ["#F5D58A"]);
+  wishMsg.innerHTML = "Close your eyes, make a wish, and let the universe surprise you. 💖"; re(wishMsg, "pop");
+  wishT = setTimeout(() => { wishMsg.innerHTML += "<br><br>May this new chapter bring you everything your heart has been hoping for. ✨"; }, 1800);
+});
+$("#relight").addEventListener("click", () => {
+  clearTimeout(wishT); cake.classList.remove("out"); document.body.classList.remove("dim");
+  $("#wish").hidden = false; $("#relight").hidden = true; wishMsg.textContent = ""; rise(8, ["✦"]);
+});
+
+/* ===== Surprise cards ===== */
+$("#b1").addEventListener("click", () => { confetti(160); rise(14); say($("#m1"), "May happiness find you in the smallest moments and the biggest dreams! 💖"); });
+
+const modal = $("#modal"), env = $("#env"); let lastF = null;
+const openM = () => { lastF = document.activeElement; env.classList.add("open"); setTimeout(() => { modal.hidden = false; document.body.classList.add("lock"); $("#mx").focus(); rise(14, ["♥"]); }, 600); };
+const closeM = () => { modal.hidden = true; env.classList.remove("open"); document.body.classList.remove("lock"); if (lastF) lastF.focus(); };
+env.addEventListener("click", openM); $("#mx").addEventListener("click", closeM);
+modal.addEventListener("click", e => { if (e.target === modal) closeM(); });
+addEventListener("keydown", e => {
+  if (e.key === "Escape") { if (!modal.hidden) closeM(); else if (!menu.hidden) setMenu(false); }
+  if (e.key === "Tab" && !modal.hidden) { e.preventDefault(); $("#mx").focus(); }
+});
+
+const magicWish = deck(["Today, may everything feel a little brighter. ✨", "May your day sparkle from morning to night. 🌟", "Your light makes the world softer. 💛", "May magic find you in every moment today. 🌸", "Happy birthday! The stars are cheering for you. ⭐"]);
+let magT = 0, magI = 0;
+$("#b3").addEventListener("click", () => {
+  clearInterval(magI); clearTimeout(magT); document.body.classList.add("magic");
+  say($("#m3"), magicWish());
+  magI = setInterval(() => { rise(5, ["✦", "♥", "d"], ["#F5D58A", "#FF8FB1"]); }, 400);
+  magT = setTimeout(() => { clearInterval(magI); document.body.classList.remove("magic"); }, 7000);
+});
+
+const smile = deck(["You deserve every beautiful thing life has to offer.", "May your smile always find a reason to shine.", "May this year surprise you in the happiest ways.", "You deserve more laughter, peace, and unforgettable moments.", "Keep shining in your own beautiful way."]);
+$("#b4").addEventListener("click", () => { say($("#m4"), smile()); rise(4, ["😊", "♥"]); });
+
+$("#b5").addEventListener("click", () => { tw($("#m5"), "Ayesha, you are wonderfully loved, and this is only the beginning of a very bright year. 💗", 40); burst(...center(), 20, { k: ["♥"], sp: 6 }); });
+
+const bh = $("#bigHeart");
+$("#b6").addEventListener("click", () => { re(bh, "go"); setTimeout(() => { burst(...center(), 60, { k: ["♥", "d", "★"], sp: 11 }); rise(12, ["♥"]); }, 450); say($("#m6"), "Sending you a universe full of happiness, love, and beautiful surprises!"); });
+
+const gens = deck([
+  "May happiness follow you wherever you go. 😊", "May every day hold a small joy that surprises you. 🌼",
+  "May your hard work turn into success you’re proud of. 🏆", "May this year open doors you’ve been dreaming about. 🚪✨",
+  "May peace settle softly into your heart. 🕊️", "May your days feel calm and unhurried. 🌿",
+  "May this year bring adventures worth remembering. 🧭", "May you find beautiful places and bright new paths. 🌅",
+  "May you always trust the wonderful person you are. 💪", "May your confidence grow with every step. 👑",
+  "May your dreams stay alive and keep growing. 🌠", "May today plant the seeds of your biggest dreams. 🌱",
+  "May you always be surrounded by kind friends and warm laughter. 🤗", "May your circle be full of love and good energy. 💞"]);
+$("#b7").addEventListener("click", () => { say($("#m7"), gens()); rise(5, ["🌸", "✦"]); });
+
+/* ===== Music (Web Audio, user-initiated only) ===== */
+// "Happy Birthday to You" as [frequency Hz, beats]; 0 = rest. Loops continuously.
+const G4 = 392, A4 = 440, B4 = 493.88, C5 = 523.25, D5 = 587.33, E5 = 659.25, F5 = 698.46, G5 = 783.99, BEAT = .5;
+const mel = [[G4,.75],[G4,.25],[A4,1],[G4,1],[C5,1],[B4,2],[G4,.75],[G4,.25],[A4,1],[G4,1],[D5,1],[C5,2],
+  [G4,.75],[G4,.25],[G5,1],[E5,1],[C5,1],[B4,1],[A4,1],[F5,.75],[F5,.25],[E5,1],[C5,1],[D5,1],[C5,2],[0,2]];
+const M = { ctx: null, g: null, on: false, i: 0, t: 0 };
+const mst = $("#mst"), playBtn = $("#play");
+function note() {
+  if (!M.on) return;
+  const [f, b] = mel[M.i++ % mel.length], c = M.ctx, d = b * BEAT;
+  if (f) {
+    const now = c.currentTime;
+    [[f, "triangle", .5], [f * 2, "sine", .12]].forEach(([fr, ty, v]) => {
+      const o = c.createOscillator(), g = c.createGain();
+      o.type = ty; o.frequency.value = fr;
+      g.gain.setValueAtTime(0, now); g.gain.linearRampToValueAtTime(v, now + .03); g.gain.exponentialRampToValueAtTime(.001, now + d * .95);
+      o.connect(g); g.connect(M.g); o.start(now); o.stop(now + d);
+    });
+  }
+  M.t = setTimeout(note, d * 1000);
+}
+function musicOn() {
+  try {
+    M.ctx = M.ctx || new (window.AudioContext || window.webkitAudioContext)();
+    if (!M.g) { M.g = M.ctx.createGain(); M.g.connect(M.ctx.destination); }
+    M.g.gain.value = +$("#vol").value; M.ctx.resume();
+    M.on = true; clearTimeout(M.t); note();
+    mst.textContent = "♪ Playing Happy Birthday on loop"; $("#mBtn").classList.add("on"); $("#mBtn").setAttribute("aria-pressed", "true"); playBtn.textContent = "⏸ Pause"; playBtn.setAttribute("aria-pressed", "true");
+  } catch (e) { mst.textContent = "Audio isn’t available in this browser."; }
+}
+function musicOff(label = "Music is paused.") {
+  M.on = false; clearTimeout(M.t); $("#mBtn").classList.remove("on"); $("#mBtn").setAttribute("aria-pressed", "false"); mst.textContent = label; playBtn.textContent = "▶ Play"; playBtn.setAttribute("aria-pressed", "false");
+}
+playBtn.addEventListener("click", () => M.on ? musicOff() : musicOn());
+$("#mBtn").addEventListener("click", () => M.on ? musicOff() : musicOn());
+$("#stop").addEventListener("click", () => { M.i = 0; musicOff("Music is off."); });
+$("#vol").addEventListener("input", e => { if (M.g) M.g.gain.value = +e.target.value; });
+
+$("#b9").addEventListener("click", () => { fireworks(4500); say($("#m9"), "Look at those sparkles! They’re all for you. 🎆"); });
+
+/* ===== Letter ===== */
+$("#readL").addEventListener("click", e => {
+  const b = $("#letterBox"), open = b.hidden; b.hidden = !open; if (open) re(b, "show");
+  e.currentTarget.setAttribute("aria-expanded", open); e.currentTarget.textContent = open ? "Close Your Birthday Note ✕" : "Read Your Birthday Note 💌";
+  if (open) rise(12, ["♥", "✿"]);
+});
+
+/* ===== 26 years ===== */
+const ring = $("#ring");
+for (let i = 0; i < 26; i++) { const d = document.createElement("i"); const r = ring.clientWidth ? 0 : 0; d.textContent = ["✦", "♥", "✿"][i % 3]; d.style.transform = `rotate(${i * 360 / 26}deg) translateY(calc(min(150px,43vw) * -1))`; d.style.animationDelay = rnd(-3, 0) + "s"; ring.appendChild(d); }
+const yw = deck(["May the next 26 years be even kinder to you. 🌷", "May you keep growing into everything you dream of. 🌱", "May your laughter stay easy and your heart stay light. 😊", "May new chapters bring you bright surprises. 📖✨", "May every year add a little more magic. 🪄"]);
+$("#b26").addEventListener("click", () => { tw($("#m26"), yw(), 30); rise(6, ["✦", "✿"]); });
+
+/* ===== Wish wall ===== */
+const wishes = ["May peace find you wherever you go.", "May your efforts turn into achievements.", "May you always find reasons to smile.", "May beautiful opportunities come your way.", "May your heart stay hopeful and your dreams stay alive.", "May this year bring adventures worth remembering.", "May you be surrounded by kindness and positivity."];
+const wc = $("#wallCards"); wishes.forEach(w => { const d = document.createElement("div"); d.className = "w"; d.textContent = w; wc.appendChild(d); });
+let wi = -1, sent = 0;
+$("#wa").addEventListener("click", () => { const cards = $$(".w"); cards.forEach(c => c.classList.remove("hi")); wi = (wi + 1) % cards.length; cards[wi].classList.add("hi"); say($("#wallMsg"), wishes[wi]); });
+$("#wb").addEventListener("click", () => { sent++; rise(14, ["♥"], ["#FF8FB1", "#FFD6E3"]); $("#wcount").textContent = `Happiness sent: ${sent} 💖`; });
+$("#wc").addEventListener("click", () => { confetti(100); burst(...center(), 40, { k: ["★", "d"], sp: 9 }); say($("#wallMsg"), "Here’s to this moment! 🎉"); });
+
+/* ===== Gift ===== */
+const gb = $("#giftBtn"), gm = $("#gmsg");
+gb.addEventListener("click", () => {
+  if (gb.classList.contains("open")) return;
+  gb.classList.add("open"); gb.setAttribute("aria-label", "Gift box opened"); $("#gclose").hidden = false;
+  const r = gb.getBoundingClientRect(); confetti(120); burst(r.left + r.width / 2, r.top + 20, 50, { k: ["★", "d", "r"], sp: 10 }); rise(14, ["★", "✦"], ["#F5D58A"]);
+  tw(gm, "Ayesha, your next chapter deserves to be extraordinary! 💖", 40);
+});
+$("#gclose").addEventListener("click", () => { gb.classList.remove("open"); gb.setAttribute("aria-label", "Open the gift box"); clearInterval(gm._t); gm.textContent = ""; $("#gclose").hidden = true; });
+
+/* ===== Finale ===== */
+const fin = $("#fin");
+$("#cel").addEventListener("click", () => {
+  confetti(220); fireworks(4000); rise(24, ["♥", "★"], ["#FF8FB1", "#F5D58A"]); re($("#fh"), "wow");
+  tw(fin, "HAPPY 26TH BIRTHDAY, AYESHA! 🎂💖✨", 45); $("#reset").hidden = false;
+});
+$("#reset").addEventListener("click", () => { clearInterval(fin._t); fin.textContent = ""; $("#fh").classList.remove("wow"); $("#reset").hidden = true; });
+
+/* ===== Pause work when tab is hidden ===== */
+document.addEventListener("visibilitychange", () => {
+  document.body.classList.toggle("hid", document.hidden);
+  if (document.hidden) { cancelAnimationFrame(raf); raf = 0; if (M.on) { M.res = true; musicOff("Music paused while you were away."); } }
+  else { if (P.length && !raf) raf = requestAnimationFrame(tick); if (M.res) { M.res = false; musicOn(); } }
+});
+})();
+</script>
+</body>
+</html>
